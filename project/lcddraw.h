@@ -68,6 +68,9 @@ void drawRect(int x_size, int y_size, u_int COLOR, int x_offset, int y_offset);
  */
 void drawRectOutline(u_char colMin, u_char rowMin, u_char width, u_char height,
 		     u_int colorBGR);
+			 
+void drawShape1(int size, int offset, u_int COLOR);
+
 #endif // included
 
 

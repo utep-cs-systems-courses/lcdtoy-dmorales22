@@ -1,4 +1,5 @@
 #include <msp430.h>
+#include <libTimer.h>
 #include "stateMachines.h"
 #include "led.h"
 #include "switches.h"
@@ -62,8 +63,9 @@ void state_advance()		/* changes the devices functions with states using switch 
 
     u_char width = screenWidth, height = screenHeight;
     clearScreen(COLOR_BLUE);
-    drawString8x12(50,100, "hello", COLOR_GREEN, COLOR_RED); //Prints hello world in 8x12 font.
-    drawString8x12(50, 80, "world", COLOR_GREEN, COLOR_RED);
+    drawString8x12(30,100, "hello", COLOR_GREEN, COLOR_RED); //Prints hello world in 8x12 font.
+    drawString8x12(30, 80, "world", COLOR_GREEN, COLOR_RED);
+    drawString8x12(30, 60, "uwu", COLOR_GREEN, COLOR_RED);
 
     state_menu(); //Every case will run the state_menu so you can change states.
     break;
@@ -90,7 +92,10 @@ void state_advance()		/* changes the devices functions with states using switch 
     flasher_light(); //Runs method to allow for blinking lights
 
     clearScreen(COLOR_BLUE);
-    drawShape1(30,75,COLOR_RED); //Renders custom shape. 
+    drawShape1(40,70,COLOR_RED); //Renders custom shape.
+    drawShape1(20,70,COLOR_GREEN);
+    drawShape1(10,70,COLOR_YELLOW);
+    drawShape1(5,70,COLOR_WHITE);
     state_menu();
     break;
   }
