@@ -9,10 +9,10 @@ AS              = msp430-elf-as
 AR              = msp430-elf-ar
 
 clean:
-	rm -f *.o *.elf timerLib/*.o timerLib/*.a
+	rm -rf *.o *.elf timerLib/*.o timerLib/*.a h lib
 
-lcdproject.elf: lcddemo.o stateMachines.o p1_interrupt_handler.o led.o switches.o buzzer.o lcddraw.o lcdutils.o font-11x16.o font-5x7.o font-8x12.o 
-	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lTimer 
+lcdproject.elf: lcddemo.o stateMachines.o p1_interrupt_handler.o led.o switches.o buzzer.o lcddraw.o lcdutils.o font-11x16.o font-5x7.o font-8x12.o lib/libTimer.a
+	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ 
 
 load: lcdproject.elf
 	msp430loader.sh $^

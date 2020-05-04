@@ -16,3 +16,10 @@ Switch 3: When pressed, the device goes into STATE3, that renders a custom shape
 
 Switch 4: When pressed, it pauses the CPU, and resumes CPU when the switch is no longer being pressed. 
 
+## How to Use it
+Follow the steps below to install it to your MSP430:
+
+make install
+make
+
+And load lcdproject.elf onto your MSP430.
