@@ -1,4 +1,7 @@
 # Project 3: Graphical LCD Toy 
+## Relating to My Project 
+My project should be in the 'project' folder. The rest are demo programs. 
+
 ## Introduction
 
 Continuing your effort to help ACME Solutions provide Christmas toys, 

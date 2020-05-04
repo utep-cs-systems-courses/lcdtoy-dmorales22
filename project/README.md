@@ -6,20 +6,21 @@ project requirements. Each button does a different action, and its functions wil
 ## Functionality
 When the device is started, it goes into the START state that prints "hello world" on the LCD.
 
-Bottom Switch: When pressed, returns to START state that will print "hello world" on the LCD.
+**Bottom Switch:** When pressed, returns to START state that will print "hello world" on the LCD.
 
-Switch 1: When pressed, the device goes into STATE1, that renders a rectangle at a certain speed to simulate movement. It has the red light on, and buzzer on. 
+**Switch 1:** When pressed, the device goes into STATE1, that renders a rectangle at a certain speed to simulate movement. It has the red light on, and buzzer on. 
 
-Switch 2: When pressed, the device goes into STATE2, that just clears the screen in the red color. 
+**Switch 2:** When pressed, the device goes into STATE2, that just clears the screen in the red color. 
 
-Switch 3: When pressed, the device goes into STATE3, that renders a custom shape. 
+**Switch 3:** When pressed, the device goes into STATE3, that renders a custom shape. 
 
-Switch 4: When pressed, it pauses the CPU, and resumes CPU when the switch is no longer being pressed. 
+**Switch 4:** When pressed, it pauses the CPU, and resumes CPU when the switch is no longer being pressed. 
 
 ## How to Use it
 Follow the steps below to install it to your MSP430:
 
-make install
-make
+**make install**
+
+**make**
 
 And load lcdproject.elf onto your MSP430.
