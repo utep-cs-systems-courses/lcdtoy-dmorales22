@@ -7,7 +7,7 @@
 #include "buzzer.h"
 #include "stateMachines.h"
 
-int main()
+int main() //Runs all the essential method to run all the device's components 
 {
   configureClocks();
   lcd_init();

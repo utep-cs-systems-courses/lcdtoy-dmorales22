@@ -29,12 +29,12 @@ void state_menu()
     current_state = STATE3;
   }
 
-  if(SW4_switch_state_down) { //If switch 4 on the board is pressed then it changes state to STATE4.
-    or_sr(0x8);	              /**< GIE (enable interrupts) */
+  if(SW4_switch_state_down) { //If switch 4 on the board, then the CPU is off. The CPU turns back on when the button is no longer being pressed.
+    or_sr(0x8);	              //< GIE (enable interrupts) 
     while(SW4_switch_state_down) {
-      or_sr(0x10);	      /**< CPU OFF */
+      or_sr(0x10);	      //< CPU OFF 
     }
-    or_sr(0x18);
+    or_sr(0x18); //CPU on
   }
 }
 void flasher_light()		//Uses switch cases to alternate green and red.
@@ -75,7 +75,8 @@ void state_advance()		/* changes the devices functions with states using switch 
     led_update(0,1); //Only red light on
     buzzer_set_period(2000);
     clearScreen(COLOR_GREEN); //Clears screen, make screen green. 
-    drawRect(50, 100, COLOR_BLUE, 30, 20); //Renders a rectangle
+    drawRect(50,100,COLOR_BLUE, 30, 20); //Renders a rectangle
+    drawRect(40,80,COLOR_RED,20, 10);
     state_menu();
     break;
 

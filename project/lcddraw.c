@@ -16,7 +16,7 @@ void drawPixel(u_char col, u_char row, u_int colorBGR)
   lcd_setArea(col, row, col, row);
   lcd_writeColor(colorBGR);
 }
-
+//Draws a custom shape with parameters specifying size, color, and offset.
 void drawShape1(int size, int offset, u_int COLOR) {
     int i;
     int j;
@@ -34,12 +34,13 @@ void drawShape1(int size, int offset, u_int COLOR) {
       }
     }
 }
+//Draws a filled rectangle with parameters specifying size, color, and offset. 
 void drawRect(int x_size, int y_size, u_int COLOR, int x_offset, int y_offset) {
     int i;
     int j;
     for(i = 0; i <= x_size; i++) {
       for(j =0; j <= y_size; j++) {
-          drawPixel(x_offset + i, y_offset + j, COLOR_BLUE);
+          drawPixel(x_offset + i, y_offset + j, COLOR);
       }
     }
 }
