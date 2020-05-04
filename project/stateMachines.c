@@ -77,6 +77,7 @@ void state_advance()		/* changes the devices functions with states using switch 
     clearScreen(COLOR_GREEN); //Clears screen, make screen green. 
     drawRect(50,100,COLOR_BLUE, 30, 20); //Renders a rectangle
     drawRect(40,80,COLOR_RED,20, 10);
+    drawRect(30,60,COLOR_YELLOW,10,5);
     state_menu();
     break;
 
@@ -88,7 +89,7 @@ void state_advance()		/* changes the devices functions with states using switch 
     break;
 
   case STATE3:
-    blink_max = 30; //Sets the blink_max value for blinking lights, and changes rendering speed. 
+    blink_max = 5; //Sets the blink_max value for blinking lights, and changes rendering speed. 
     buzzer_set_period(500);
     flasher_light(); //Runs method to allow for blinking lights
 
@@ -97,6 +98,7 @@ void state_advance()		/* changes the devices functions with states using switch 
     drawShape1(20,70,COLOR_GREEN);
     drawShape1(10,70,COLOR_YELLOW);
     drawShape1(5,70,COLOR_WHITE);
+    drawShape1(2,70,COLOR_BLACK);
     state_menu();
     break;
   }
